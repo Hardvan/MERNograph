@@ -1,6 +1,11 @@
 import React from "react";
 import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
 
+// Import components
+import Posts from "./components/Posts/Posts";
+import Form from "./components/Form/Form";
+
+// Import images
 import mernograph from "./images/mernograph.png";
 
 const App = () => {
