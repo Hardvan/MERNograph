@@ -3,11 +3,17 @@ import bodyParser from "body-parser"; // For parsing the body of the request
 import mongoose from "mongoose"; // For connecting to the database
 import cors from "cors"; // For cross origin resource sharing
 
+// Importing the routes (Custom)
+import postRoutes from "./routes/posts.js";
+
 // Import .env file
 import dotenv from "dotenv";
 dotenv.config();
 
 const app = express(); // Creating the server
+
+// Setting up the routes
+app.use("/posts", postRoutes); // All the routes in posts.js will start with /posts
 
 // Setting up the body parser to parse the body of the request
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
