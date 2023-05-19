@@ -32,7 +32,5 @@ mongoose
   )
   .catch((error) => console.log(error.message));
 
-mongoose.set("useFindAndModify", false);
-
 // Setting up the port
 const PORT = process.env.PORT || 5000;
