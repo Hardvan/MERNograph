@@ -9,11 +9,11 @@ import Form from "./components/Form/Form";
 import mernograph from "./images/mernograph.png";
 
 // Import styles
-import makeStyles from "./styles";
+import useStyles from "./styles";
 
 const App = () => {
   // Use the styles defined in styles.js
-  const classes = makeStyles();
+  const classes = useStyles();
 
   return (
     <Container maxwidth="lg">
