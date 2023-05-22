@@ -10,7 +10,8 @@ import postRoutes from "./routes/posts.js";
 import dotenv from "dotenv";
 dotenv.config();
 
-const app = express(); // Creating the server
+// Creating the server
+const app = express();
 
 // Setting up the routes
 app.use("/posts", postRoutes); // All the routes in posts.js will start with /posts

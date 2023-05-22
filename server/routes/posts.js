@@ -9,7 +9,7 @@ import { getPosts, createPosts } from "../controllers/posts.js";
 
 const router = express.Router();
 
-// '/' is the default route for the posts
+// '/posts' is the base route
 router.get("/", getPosts);
 router.post("/", createPosts);
 
