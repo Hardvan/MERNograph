@@ -5,9 +5,11 @@ import { TextField, Button, Typography, Paper } from "@material-ui/core";
 // Convert image to base64
 import FileBase from "react-file-base64";
 
+import { useDispatch } from "react-redux";
+import { createPost } from "../../actions/posts";
+
 const Form = () => {
   const classes = useStyles();
-
   const [postData, setPostData] = useState({
     creator: "",
     title: "",
@@ -15,6 +17,7 @@ const Form = () => {
     tags: "",
     selectedFile: "",
   });
+  const dispatch = useDispatch();
 
   const handleChange = (e) => {
     setPostData({
@@ -22,9 +25,11 @@ const Form = () => {
       [e.target.name]: e.target.value,
     });
   };
+  const handleSubmit = (e) => {
+    e.preventDefault();
 
-  const handleSubmit = () => {};
-
+    dispatch(createPost(postData));
+  };
   const clear = () => {};
 
   return (

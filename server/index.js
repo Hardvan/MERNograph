@@ -26,7 +26,7 @@ app.use("/posts", postRoutes); // All the routes in posts.js will start with /po
 // Setting MongoDB
 const username = process.env.MONGODB_USER;
 const password = process.env.MONGODB_PASSWORD;
-const CONNECTION_URL = `mongodb+srv://${username}:${password}@mernographcluster.uxk0si7.mongodb.net/?retryWrites=true&w=majority`;
+const CONNECTION_URL = `mongodb+srv://${username}:${password}@mernographcluster.uxk0si7.mongodb.net/?retryWrites=true&w=majority&ssl=true`;
 
 // Connecting to the database
 mongoose
