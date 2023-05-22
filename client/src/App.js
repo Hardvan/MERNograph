@@ -12,9 +12,11 @@ const App = () => {
   return (
     <Container maxwidth="lg">
       <AppBar position="static" color="inherit">
+        {/* Title */}
         <Typography variant="h2" align="center">
           MERNograph
         </Typography>
+        {/* Logo */}
         <img src={mernograph} alt="mernograph" height="60" />
       </AppBar>
       <Grow in>
@@ -25,10 +27,13 @@ const App = () => {
             alignItems="stretch"
             spacing={3}
           >
+            {/* Posts */}
             {/*  Full width on mobile devices, 7 columns on small devices and up */}
             <Grid item xs={12} sm={7}>
               <Posts />
             </Grid>
+
+            {/* Form */}
             {/*  Full width on mobile devices, 4 columns on small devices and up */}
             <Grid item xs={12} sm={4}>
               <Form />
