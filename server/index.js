@@ -13,15 +13,15 @@ dotenv.config();
 // Creating the server
 const app = express();
 
-// Setting up the routes
-app.use("/posts", postRoutes); // All the routes in posts.js will start with /posts
-
 // Setting up the body parser to parse the body of the request
 app.use(bodyParser.json({ limit: "30mb", extended: true }));
 app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
 
 // Setting up the cors
 app.use(cors());
+
+// Setting up the routes
+app.use("/posts", postRoutes); // All the routes in posts.js will start with /posts
 
 // Setting MongoDB
 const username = process.env.MONGODB_USER;

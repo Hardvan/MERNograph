@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Container, AppBar, Typography, Grow, Grid } from "@material-ui/core";
 
 // Import components
@@ -11,9 +11,23 @@ import mernograph from "./images/mernograph.png";
 // Import styles
 import useStyles from "./styles";
 
+// Allows us to Dispatch an action
+import { useDispatch } from "react-redux";
+
+// Import the action
+import { getPosts } from "./actions/posts";
+
 const App = () => {
   // Use the styles defined in styles.js
   const classes = useStyles();
+
+  // Set up the dispatch
+  const dispatch = useDispatch();
+
+  // Use the useEffect hook to dispatch the action (getPosts) when the page loads
+  useEffect(() => {
+    dispatch(getPosts());
+  }, [dispatch]);
 
   return (
     <Container maxwidth="lg">
