@@ -8,16 +8,27 @@ import Form from "./components/Form/Form";
 // Import images
 import mernograph from "./images/mernograph.png";
 
+// Import styles
+import makeStyles from "./styles";
+
 const App = () => {
+  // Use the styles defined in styles.js
+  const classes = makeStyles();
+
   return (
     <Container maxwidth="lg">
-      <AppBar position="static" color="inherit">
+      <AppBar className={classes.appBar} position="static" color="inherit">
         {/* Title */}
-        <Typography variant="h2" align="center">
+        <Typography variant="h2" align="center" className={classes.heading}>
           MERNograph
         </Typography>
         {/* Logo */}
-        <img src={mernograph} alt="mernograph" height="60" />
+        <img
+          src={mernograph}
+          className={classes.image}
+          alt="mernograph"
+          height="60"
+        />
       </AppBar>
       <Grow in>
         <Container>
